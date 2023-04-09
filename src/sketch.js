@@ -27,8 +27,8 @@ const globals = {
 
 let floorImg, bgImg;
 function preload() {
-  floorImg = loadImage('https://raw.githubusercontent.com/adityathebe/evolutionSimulator/master/assets/ground.png');
-  bgImg = loadImage('https://raw.githubusercontent.com/adityathebe/evolutionSimulator/master/assets/bg.png');
+  floorImg = loadImage('../assets/ground.png');
+  bgImg = loadImage('../assets/bg.png');
 }
 
 const setUpEnvironment = () => {
@@ -88,7 +88,7 @@ function drawRect(body) {
 const rangeInput = document.getElementById('simulationSlider');
 rangeInput.addEventListener(
   'input',
-  function(event) {
+  function (event) {
     config.simulationSpeed = rangeInput.value;
     clearInterval(globals.simulationInterval);
     clearInterval(globals.evolutionInterval);
