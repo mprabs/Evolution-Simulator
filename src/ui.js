@@ -1,7 +1,11 @@
 class UIController {
   static uploadCustomGenome() {
-    const customGenome = JSON.parse(document.getElementById('userGenomeInput').value);
-    GeneticAlgorithm.useCustomGenome(customGenome);
+    const userGenomeInput = document.getElementById('userGenomeInput');
+
+    if (userGenomeInput && userGenomeInput.value) {
+      const customGenome = JSON.parse(userGenomeInput.value);
+      GeneticAlgorithm.useCustomGenome(customGenome);
+    }
   }
 
   static downloadBestGenome() {
